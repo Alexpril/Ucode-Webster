@@ -1,0 +1,6 @@
+.tui-image-editor-header-logo{
+    opacity: 0%;
+}
+.tui-image-editor-container .tui-image-editor-header-buttons button{
+    border-radius: 0;
+}

@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <h1 class="display-4">Enjoy!</h1>
+        <h1><a href="http://localhost:3000">EasyPaint</a></h1>
+        <img src="https://3.bp.blogspot.com/-2rcrKlA13ds/W1NtmtCYTiI/AAAAAAAAAgo/6sS8D4JjvvUvd_scZMlehpC5H6MyyDZVQCLcBGAs/s320/Cat%2Benjoy%2Bmassage%2Bso%2Brelaxing%2Bvery%2Bcute%2Bcat%2Bgifs.gif">
+    }
+    else
+    {
+        <h1 class="display-4">Please login to use EasyPaint</h1>
+        <img src="https://c.tenor.com/_W2FjRBFfkcAAAAM/cat-please.gif">
+    }
+</div>
